@@ -4,3 +4,4 @@ tslint.json
 src
 test
 coverage
+test_server

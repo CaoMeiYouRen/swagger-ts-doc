@@ -81,6 +81,5 @@ function onListening(): void {
     const bind = typeof addr === "string"
         ? "pipe " + addr
         : "port " + addr.port;
-    iDebugger("Listening on " + bind);
-    console.log("Listening on " + bind);
+    console.log("http://localhost:" + bind + "/api-docs");
 }
