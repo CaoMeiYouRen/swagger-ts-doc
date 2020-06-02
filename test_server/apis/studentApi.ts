@@ -45,7 +45,7 @@ export class StudentApi {
                 new Response(HttpStatusCode.OK, DataType.STRING),
             ]);
         route.delete("/:id", (req, res, next) => {
-            const id = req.params.id;
+            const id = Number(req.params.id);
             this.deleteStudent(id);
             res.json("");
         });
@@ -58,7 +58,7 @@ export class StudentApi {
                 new Response(HttpStatusCode.OK, DataType.STRING),
             ]);
         route.put("/:id", (req, res, next) => {
-            const id = req.params.id;
+            const id = Number(req.params.id);
             const input = MappingProvider.toDtoObject<Student>(Student, req.body);
             input.id = id;
             this.modifyStudent(input);
